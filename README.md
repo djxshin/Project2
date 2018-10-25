@@ -3,4 +3,4 @@ Project-2 WDI-18
 
 ERD
 
-(images/erd.jpeg)
+(images/ERD.jpeg)
