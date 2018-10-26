@@ -1,7 +1,11 @@
 const usersController = {
     index: (req, res) => {
-        res.send('This is USER!!!!!!')
+        res.send('Hey USER!!!!!!!')
     }
+    
+
 }
 
 module.exports = usersController
+
+
