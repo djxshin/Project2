@@ -1,0 +1,12 @@
+<h1>Welcome {{user.name}} </h1>
+<h2>You have liked the following albums</h2>
+{{#each user.albums}}
+<div class="card" style="width: 18rem;">
+
+    <div class="card-body">
+        <h5 class="card-title">{{name}}</h5>
+        <p class="card-text">Price: $ {{Album_Title}}</p>
+        <a href="/users/{{../user._id}}/albums/{{_id}}" class="btn btn-primary">Go somewhere</a>
+    </div>
+</div>
+{{/each}}

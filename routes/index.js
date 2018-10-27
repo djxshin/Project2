@@ -15,9 +15,10 @@ router.get('/', applicationController.index)
 // INDEX
 router.get('/users', usersController.index)
 // NEW
-router.get('/users/new', userController.new)
+router.get('/users/new', usersController.new)
+
 // SHOW
-// router.get('/users/:usersId', storesController.show)
+router.get('/users/:usersId', usersController.show)
 // CREATE
 // router.post('/users', userController.create)
 // EDIT
