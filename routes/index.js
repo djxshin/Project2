@@ -12,7 +12,21 @@ router.get('/', applicationController.index)
 
 
 
+// INDEX
 router.get('/users', usersController.index)
+// NEW
+router.get('/users/new', userController.new)
+// SHOW
+// router.get('/users/:usersId', storesController.show)
+// CREATE
+// router.post('/users', userController.create)
+// EDIT
+// router.get('/users/:usersId/edit', usersController.edit)
+// UPDATE
+// router.put('/users/:usersId', usersController.update)
+// DELETE
+// router.delete('/users/:usersId', usersController.delete)
+
 
 
 router.get('/albums', albumsController.index)
