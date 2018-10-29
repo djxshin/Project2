@@ -18,30 +18,32 @@
 				{{user.soundcloud}}
                 </p>
             <br>
+
 		<h3>Apple_music:</h3>
-			<p id="apple_music:">
+			<p>
 
 				{{user.apple_music}} </p>
             <br>
 
-			<h3 id="quantity">
+        <h3>Favorite_genre:</h3>
+			<p>
 
-	 				{{donut.qty}} remaining
+				{{user.favorite_genre}} </p>
+            <br>
+		
+          <h3>Location:</h3>
+			<p>
 
-			</h3>
-
-			<br>
-
-		  <a href="/{{donut._id}}/edit">EDIT</a>
-
+				{{user.location}} </p>
+            <br>
+        
+    
 		
 
 		</div>
 
-    <form action="/{{user._id}}?_method=DELETE" method="POST">
+    <form action="/users/{{user._id}}?_method=DELETE" method="POST">
       <button type="submit">DELETE THIS USER</button>
     </form>
-     <form action="/{{user._id}}/edit">
-      <button type="submit">EDIT THIS USER</button>
-    </form>
+    <a href="/users/{{user._id}}/edit"><button type='submit'>Edit</button></a>
 </main>

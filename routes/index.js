@@ -22,9 +22,9 @@ router.get('/users/:usersId', usersController.show)
 // CREATE
 router.post('/users', usersController.create)
 // EDIT
-// router.get('/users/:usersId/edit', usersController.edit)
+router.get('/users/:usersId/edit', usersController.edit)
 // UPDATE
-// router.put('/users/:usersId', usersController.update)
+router.put('/users/:usersId', usersController.update)
 // DELETE
 // router.delete('/users/:usersId', usersController.delete)
 
