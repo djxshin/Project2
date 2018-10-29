@@ -1,49 +1,51 @@
 <main>
 
-	<h2>Viewing User Name:
-        
+    <h2>Viewing User Name:
 
-		{{user.name}}
 
-	</h2>
+        {{user.name}}
+
+    </h2>
 
 
     <br>
-	<div class="container-show">
-	
+    <div class="container-show">
 
-		<h3>Soundcloud:</h3>
-			    <p>
 
-				{{user.soundcloud}}
-                </p>
-            <br>
+        <h3>Soundcloud:</h3>
+        <p>
 
-		<h3>Apple_music:</h3>
-			<p>
+            {{user.soundcloud}}
+        </p>
+        <br>
 
-				{{user.apple_music}} </p>
-            <br>
+        <h3>Apple_music:</h3>
+        <p>
+
+            {{user.apple_music}} </p>
+        <br>
 
         <h3>Favorite_genre:</h3>
-			<p>
+        <p>
 
-				{{user.favorite_genre}} </p>
-            <br>
-		
-          <h3>Location:</h3>
-			<p>
+            {{user.favorite_genre}} </p>
+        <br>
 
-				{{user.location}} </p>
-            <br>
-        
-    
-		
+        <h3>Location:</h3>
+        <p>
 
-		</div>
+            {{user.location}} </p>
+        <br>
+
+
+
+
+    </div>
+
+    <a href="/users/{{user._id}}/edit"><button type='submit'>Edit</button></a>
+
+</main>
 
     <form action="/users/{{user._id}}?_method=DELETE" method="POST">
-      <button type="submit">DELETE THIS USER</button>
+    <button type='submit'>DELETE</button>
     </form>
-    <a href="/users/{{user._id}}/edit"><button type='submit'>Edit</button></a>
-</main>

@@ -26,7 +26,7 @@ router.get('/users/:usersId/edit', usersController.edit)
 // UPDATE
 router.put('/users/:usersId', usersController.update)
 // DELETE
-// router.delete('/users/:usersId', usersController.delete)
+router.delete('/users/:usersId', usersController.delete)
 
 
 

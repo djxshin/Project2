@@ -17,6 +17,7 @@ const usersController = {
         const userId = req.params.usersId
         User.findById(userId).populate('albums')
             .then((user) => {
+                console.log(user)
                 res.render('users/show', {
                     user: user
                 })
@@ -39,7 +40,14 @@ const usersController = {
 
     update: (req, res) => {
         User.findByIdAndUpdate(req.params.usersId, req.body).then((updatedUser) => {
+            console.log(updatedUser)
             res.redirect(`/users/${updatedUser._id}`)
+        })
+    },
+    delete: (req, res) => {
+        
+        User.findByIdAndRemove(req.params.usersId).then(() => {
+            res.redirect('/users')
         })
     }
 

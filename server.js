@@ -3,7 +3,7 @@ require('dotenv').config();
 // boiler plate
 const express = require('express')
 const app = express()
-
+const methodOverride = require('method-override')
 const routes = require('./routes/index')
 
 app.use(express.urlencoded({ extended: true }));
@@ -29,6 +29,7 @@ app.set('view engine', 'hbs');
 
 app.use(logger('dev'));
 app.use(express.json());
+app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
