@@ -14,8 +14,8 @@ const usersController = {
         res.render('users/new')
       },
     show: (req, res) => {
-        const userId = req.params.userId
-        User.findById(userId).populate('albums')
+        const usersId = req.params.usersId
+        User.findById(usersId).populate('Favorite_Albums')
             .then((user) => {
                 res.render('users/show', { user: user })
             })
