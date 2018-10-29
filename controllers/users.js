@@ -14,10 +14,10 @@ const usersController = {
         res.render('users/new')
       },
     show: (req, res) => {
-        const usersId = req.params.usersId
-        User.findById(usersId).populate('Favorite_Albums')
+        const userId = req.params.usersId
+        User.findById(userId).populate('albums')
             .then((user) => {
-                res.render('users/show', { user: user })
+                res.render('users/show', {user: user})
             })
     },
     create: (req, res) => {

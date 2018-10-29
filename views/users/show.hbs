@@ -1,14 +1,47 @@
-<h1>Welcome {{user.name}} </h1>
-<h2>You have liked the following albums</h2>
-{{#each user.albums}}
-<div class="card" style="width: 18rem;">
+<main>
 
-    <div class="card-body">
-        <h5 class="card-title">{{name}}</h5>
-        <h5 class="card-title">{{name}}</h5>
-        <h5 class="card-title">{{name}}</h5>
-        <p class="card-text">Price: $ {{Album_Title}}</p>
-        <a href="/users/{{../user._id}}/albums/{{_id}}" class="btn btn-primary">Go somewhere</a>
-    </div>
-</div>
-{{/each}}
+	<h2>Viewing User Name:
+        
+
+		{{user.name}}
+
+	</h2>
+
+
+    <br>
+	<div class="container-show">
+	
+
+		<h3>Soundcloud:</h3>
+			    <p>
+
+				{{user.soundcloud}}
+                </p>
+            <br>
+		<h3>Apple_music:</h3>
+			<p id="apple_music:">
+
+				{{user.apple_music}} </p>
+            <br>
+
+			<h3 id="quantity">
+
+	 				{{donut.qty}} remaining
+
+			</h3>
+
+			<br>
+
+		  <a href="/{{donut._id}}/edit">EDIT</a>
+
+		
+
+		</div>
+
+    <form action="/{{user._id}}?_method=DELETE" method="POST">
+      <button type="submit">DELETE THIS USER</button>
+    </form>
+     <form action="/{{user._id}}/edit">
+      <button type="submit">EDIT THIS USER</button>
+    </form>
+</main>
