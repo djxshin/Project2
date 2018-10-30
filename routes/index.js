@@ -32,6 +32,8 @@ router.delete('/users/:usersId', usersController.delete)
 
 router.get('/albums', albumsController.index)
 
+
+
 router.get('/tracks', tracksController.index)
 
 module.exports = router;
