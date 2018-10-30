@@ -30,13 +30,13 @@ const albumsController = {
         })
     },
 
-    // edit: (req, res) => {
-    //     User.findById(req.params.usersId).then(use => {
-    //         res.render('users/edit', {
-    //             use: use
-    //         })
-    //     })
-    // },
+    edit: (req, res) => {
+        Album.findById(req.params.albumsId).then(albums => {
+            res.render('albums/edit', {
+                albums: albums
+            })
+        })
+    },
 
     // update: (req, res) => {
     //     User.findByIdAndUpdate(req.params.usersId, req.body).then((updatedUser) => {

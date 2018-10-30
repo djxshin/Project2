@@ -36,6 +36,8 @@ router.get('/albums/new', albumsController.new)
 router.get('/albums/:albumsId', albumsController.show)
 // CREATE
 router.post('/albums', albumsController.create)
+// EDIT
+router.get('/albums/:albumsId/edit', albumsController.edit)
 
 
 
