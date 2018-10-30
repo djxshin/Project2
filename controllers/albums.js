@@ -3,10 +3,12 @@ const User= require('../models/User')
 
 const albumsController = {
     index: (req, res) => {
-        Album.find().then((albums)  => {
+        const userId = req.params.usersId
+        User.findById(userId).populate('Favorite_Albums')
+        .then((user)  => {
+            
                 res.render('albums/index', {
-                    albums: albums
-
+                    user: user
                 })
             }) 
         },
@@ -14,8 +16,8 @@ const albumsController = {
         res.render('albums/new')
     },
     show: (req, res) => {
-        const albumsId = req.params.albumsId
-        Album.findById(albumsId).populate('tracks')
+        const usersId = req.params.usersId
+        User.findById(usersId).populate('albums')
             .then((albums) => {
                 
                 res.render('albums/show', {
@@ -25,31 +27,31 @@ const albumsController = {
     },
     create: (req, res) => {
         // req.body is just a JS object with data from the form
-        Album.create(req.body).then(() => {
+        User.create(req.body).then(() => {
             res.redirect(`/albums`)
         })
     },
 
     edit: (req, res) => {
-        Album.findById(req.params.albumsId).then(albums => {
+        User.findById(req.params.usersId).then(albums => {
             res.render('albums/edit', {
                 albums: albums
             })
         })
     },
 
-    // update: (req, res) => {
-    //     User.findByIdAndUpdate(req.params.usersId, req.body).then((updatedUser) => {
-    //         console.log(updatedUser)
-    //         res.redirect(`/users/${updatedUser._id}`)
-    //     })
-    // },
-    // delete: (req, res) => {
+    update: (req, res) => {
+        User.findByIdAndUpdate(req.params.usersId, req.body).then((updatedAlbums) => {
+            console.log(updatedAlbums)
+            res.redirect(`/albums/${updatedAlbums._id}`)
+        })
+    },
+    delete: (req, res) => {
         
-    //     User.findByIdAndRemove(req.params.usersId).then(() => {
-    //         res.redirect('/users')
-    //     })
-    // }
+        User.findByIdAndRemove(req.params.usersId).then(() => {
+            res.redirect('/albums')
+        })
+    }
 
 
 }

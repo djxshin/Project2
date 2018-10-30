@@ -18,6 +18,7 @@ router.get('/users', usersController.index)
 router.get('/users/new', usersController.new)
 // SHOW
 router.get('/users/:usersId', usersController.show)
+
 // CREATE
 router.post('/users', usersController.create)
 // EDIT
@@ -29,15 +30,19 @@ router.delete('/users/:usersId', usersController.delete)
 
 
 // INDEX
-router.get('/albums', albumsController.index)
+router.get('/users/:usersId/albums', albumsController.index)
 // NEW
-router.get('/albums/new', albumsController.new)
+router.get('/users/:usersId/albums/new', albumsController.new)
 // SHOW
-router.get('/albums/:albumsId', albumsController.show)
+router.get('/users/:usersId/albums/:albumsId', albumsController.show)
 // CREATE
-router.post('/albums', albumsController.create)
+router.post('/users/:usersId/albums', albumsController.create)
 // EDIT
-router.get('/albums/:albumsId/edit', albumsController.edit)
+router.get('/users/:usersId/albums/edit', albumsController.edit)
+// UPDATE
+router.put('/users/:usersId/albums/:albumsId', albumsController.update)
+// DELETE
+router.delete('/users/:usersId/albums/:albumsId', albumsController.delete)
 
 
 
