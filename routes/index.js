@@ -31,6 +31,7 @@ router.delete('/users/:usersId', usersController.delete)
 
 
 router.get('/albums', albumsController.index)
+router.get('/albums/new', albumsController.new)
 
 
 

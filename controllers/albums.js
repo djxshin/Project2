@@ -9,10 +9,10 @@ const albumsController = {
 
                 })
             }) 
-        }
-    // new: (req, res) => {
-    //     res.render('users/new')
-    // },
+        },
+    new: (req, res) => {
+        res.render('users/new')
+    },
     // show: (req, res) => {
     //     const userId = req.params.usersId
     //     User.findById(userId).populate('albums')
