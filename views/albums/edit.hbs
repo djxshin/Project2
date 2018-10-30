@@ -1,0 +1,31 @@
+<main>
+
+  <h2>Edit Your Album</h2>
+
+  
+  <div id="edit-form" class="USER">
+
+    <form action="/albums/{{albums._id}}?_method=PUT" method="POST">
+      <div>
+        <label for="Album_Title:">Album_Title: </label>
+        <input type="text" name="Album_Title">
+      </div>
+      <div>
+        <label for="Image">Image: </label>
+        <input type="text" name="Image">
+      </div>
+      <div>
+        <label for="Purhcased">Purhcased: </label>
+        <input type="text" name='Purhcased'>
+      </div>
+      <div>
+        <label for="Favorite_Tracks">fFavorite_Tracks: </label>
+        <input type="text" name="Favorite_Tracks">
+      </div>
+      
+     
+    <button type="submit">Edit Album</button>
+    </form>
+
+  </div>
+</main>

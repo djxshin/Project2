@@ -1,0 +1,47 @@
+<main>
+
+    <h2>Album_Title:
+
+
+      {{albums.Album_Title}}
+
+    </h2>
+
+
+    <br>
+    <div class="container-show">
+
+
+        <h3>Image:</h3>
+        <p>
+<img src=" {{albums.Image}}" alt="album image">
+            
+        </p>
+        <br>
+
+        <h3>Purhcased:</h3>
+        <p>
+
+            {{albums.Purhcased}} </p>
+        <br>
+
+        <h3>Favorite_Tracks:</h3>
+        <p>
+
+            {{albums.Favorite_Tracks}} </p>
+        <br>
+
+        
+
+
+
+
+    </div>
+
+    <a href="/albums/{{albums._id}}/edit"><button type='submit'>Edit</button></a>
+
+</main>
+
+    <form action="/albums/{{albums._id}}?_method=DELETE" method="POST">
+    <button type='submit'>DELETE</button>
+    </form>

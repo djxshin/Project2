@@ -11,24 +11,24 @@ const albumsController = {
             }) 
         },
     new: (req, res) => {
-        res.render('users/new')
+        res.render('albums/new')
     },
-    // show: (req, res) => {
-    //     const userId = req.params.usersId
-    //     User.findById(userId).populate('albums')
-    //         .then((user) => {
-    //             console.log(user)
-    //             res.render('users/show', {
-    //                 user: user
-    //             })
-    //         })
-    // },
-    // create: (req, res) => {
-    //     // req.body is just a JS object with data from the form
-    //     User.create(req.body).then(() => {
-    //         res.redirect(`/users`)
-    //     })
-    // },
+    show: (req, res) => {
+        const albumsId = req.params.albumsId
+        Album.findById(albumsId).populate('tracks')
+            .then((albums) => {
+                
+                res.render('albums/show', {
+                    albums: albums
+                })
+            })
+    },
+    create: (req, res) => {
+        // req.body is just a JS object with data from the form
+        Album.create(req.body).then(() => {
+            res.redirect(`/albums`)
+        })
+    },
 
     // edit: (req, res) => {
     //     User.findById(req.params.usersId).then(use => {

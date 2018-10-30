@@ -16,7 +16,6 @@ router.get('/', applicationController.index)
 router.get('/users', usersController.index)
 // NEW
 router.get('/users/new', usersController.new)
-
 // SHOW
 router.get('/users/:usersId', usersController.show)
 // CREATE
@@ -29,9 +28,14 @@ router.put('/users/:usersId', usersController.update)
 router.delete('/users/:usersId', usersController.delete)
 
 
-
+// INDEX
 router.get('/albums', albumsController.index)
+// NEW
 router.get('/albums/new', albumsController.new)
+// SHOW
+router.get('/albums/:albumsId', albumsController.show)
+// CREATE
+router.post('/albums', albumsController.create)
 
 
 
