@@ -33,11 +33,15 @@ const albumsController = {
     },
     create: (req, res) => {
         const usersId = req.params.usersId
-        User.findById(usersId)
+        User.findById(usersId).populate("Favorite_Albums")
         .then(user =>{
-            Album.create(req.body).then(() => {
+            const albums = user.Favorite_Albums
+            console.log(albums)
+            Album.create(req.body).then((newAlbum) => {
+                albums.push(newAlbum)
                 res.redirect(`/users/${usersId}/albums`)
             })
+            user.save()
         })
  // req.body is just a JS object with data from the form
     },
