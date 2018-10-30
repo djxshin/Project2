@@ -13,7 +13,13 @@ const albumsController = {
             }) 
         },
     new: (req, res) => {
-        res.render('albums/new')
+        const userId = req.params.usersId
+        User.findById(userId)
+        .then(users => {
+        res.render('albums/new', {
+            users: users
+        } )
+        })
     },
     show: (req, res) => {
         const usersId = req.params.usersId
@@ -26,13 +32,14 @@ const albumsController = {
             })
     },
     create: (req, res) => {
-        User.findById(usersId)
         const usersId = req.params.usersId
-        
-        // req.body is just a JS object with data from the form
-        User.create(req.body).then(() => {
-            res.redirect(`/users/userId/albums`)
+        User.findById(usersId)
+        .then(user =>{
+            Album.create(req.body).then(() => {
+                res.redirect(`/users/${usersId}/albums`)
+            })
         })
+ // req.body is just a JS object with data from the form
     },
 
     edit: (req, res) => {
