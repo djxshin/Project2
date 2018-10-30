@@ -1,0 +1,11 @@
+<h1>Welcome To User</h1>
+{{#each tracks}}
+<div class="card" style="width: 18rem;">
+
+    <div class="card-body">
+        <h5 class="card-title">{{Track_Title}}</h5>
+
+        <a href="/users/{{_id}}" class="btn btn-primary">User Info</a>
+    </div>
+</div>
+{{/each}}

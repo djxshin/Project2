@@ -1,7 +1,14 @@
+const Track = require('../models/Track')
+
 const tracksController = {
     index: (req, res) => {
-        res.send('This track is fuego!!!!!!')
+        Track.find({}).populate('tracks')
+            .then((tracks) => {
+                res.render('tracks/index', {
+                    tracks: tracks
+
+                })
+            })
     }
 }
-
 module.exports = tracksController

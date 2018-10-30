@@ -23,7 +23,7 @@ const albumsController = {
     },
     show: (req, res) => {
         const usersId = req.params.usersId
-        User.findById(usersId).populate('albums')
+        User.findById(usersId).populate('Favorite_Albums')
             .then((albums) => {
                 
                 res.render('albums/show', {

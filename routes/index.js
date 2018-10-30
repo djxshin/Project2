@@ -46,6 +46,26 @@ router.delete('/users/:usersId/albums/:albumsId', albumsController.delete)
 
 
 
+
+
+// INDEX
 router.get('/tracks', tracksController.index)
+// // NEW
+// router.get('/users/new', usersController.new)
+// // SHOW
+// router.get('/users/:usersId', usersController.show)
+
+// // CREATE
+// router.post('/users', usersController.create)
+// // EDIT
+// router.get('/users/:usersId/edit', usersController.edit)
+// // UPDATE
+// router.put('/users/:usersId', usersController.update)
+// // DELETE
+// router.delete('/users/:usersId', usersController.delete)
+
+
+
+
 
 module.exports = router;
