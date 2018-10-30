@@ -26,9 +26,12 @@ const albumsController = {
             })
     },
     create: (req, res) => {
+        User.findById(usersId)
+        const usersId = req.params.usersId
+        
         // req.body is just a JS object with data from the form
         User.create(req.body).then(() => {
-            res.redirect(`/albums`)
+            res.redirect(`/users/userId/albums`)
         })
     },
 
