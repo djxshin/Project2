@@ -52,8 +52,8 @@ router.delete('/users/:usersId/albums/:albumsId', albumsController.delete)
 router.get('/tracks', tracksController.index)
 // // NEW
 // router.get('/users/new', usersController.new)
-// // SHOW
-// router.get('/users/:usersId', usersController.show)
+// SHOW
+// router.get('/tracks/:tracksId/tracks/:tracksId', tracksController.show)
 
 // // CREATE
 // router.post('/users', usersController.create)

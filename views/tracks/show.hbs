@@ -1,0 +1,30 @@
+<main>
+
+    <h2>Viewing User Name:
+
+
+        {{tracks.Track_Title}}
+
+    </h2>
+
+
+    <br>
+    <div class="container-show">
+
+
+        <h3>Purchased:</h3>
+        <p>
+
+            {{tracks.Purchased}}
+        </p>
+       
+    </div>
+
+    <a href="/users/{{user._id}}/edit" class="btn btn-primary" type='submit'>Edit</a>
+   
+
+</main>
+    <a  href="/users/{{user._id}}/albums/new" class="btn btn-primary">ADD ALBUM</a>
+    <form action="/users/{{user._id}}?_method=DELETE" class="btn btn-primary" method="POST" type='submit'>
+    DELETE
+    </form>

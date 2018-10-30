@@ -9,6 +9,6 @@ const tracksController = {
 
                 })
             })
-    }
+    },
 }
 module.exports = tracksController

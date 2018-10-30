@@ -39,9 +39,11 @@ const albumsController = {
             console.log(albums)
             Album.create(req.body).then((newAlbum) => {
                 albums.push(newAlbum)
+                user.save()
                 res.redirect(`/users/${usersId}/albums`)
+                
             })
-            user.save()
+          
         })
  // req.body is just a JS object with data from the form
     },
