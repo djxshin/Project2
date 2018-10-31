@@ -1,13 +1,17 @@
-<h1>Albums</h1>
-<h1>{{user.name}}</h1>
+<h1>Favorite Albums</h1>
+<h1> User Name: {{user.name}}</h1>
 
 {{#each user.Favorite_Albums}}
 <div class="card" style="width: 18rem;">
 
     <div class="card-body">
-        <h5 class="card-title">{{Album_Title}}</h5>
+        <h5 class="card-title">Album Title: {{Album_Title}}</h5>
+        <h5 class="card-title">
+          Image: <img src="{{Image}}" alt="">
+        </h5>
+        <h5 class="card-title">Album Purchased? {{Purhcased}}</h5>
 
-        <a href="/users/{{_id}}/albums/{{_id}}" class="btn btn-primary">Album Info</a>
+       
     </div>
 </div>
 {{/each}}
