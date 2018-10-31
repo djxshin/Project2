@@ -1,8 +1,33 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background:pink;
 }
 
 a {
   color: #00B7FF;
+}
+
+#intro{
+  font-size: 30px;
+}
+
+.userinfo{
+  font-size:20px;
+  color: blue;
+}
+
+.btn{
+  width: 200px;
+  padding:10px;
+}
+
+.card-body{
+  width: 500px;
+  background-color: gold;
+  padding: 10px;
+}
+
+#namep{
+  font-size:20px;
 }
