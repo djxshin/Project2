@@ -7,11 +7,17 @@
     <div class="card-body">
         <h5 class="card-title">Album Title: {{Album_Title}}</h5>
         <h5 class="card-title">
-          Image: <img src="{{Image}}" alt="">
+            Image: <img src="{{Image}}" alt="">
         </h5>
         <h5 class="card-title">Album Purchased? {{Purhcased}}</h5>
 
-       
+
     </div>
 </div>
 {{/each}}
+
+<a href="/users/{{user._id}}/edit" class="btn btn-primary" type='submit'>Edit ALBUM</a>
+<a href="/users/{{user._id}}/albums" class="btn btn-primary">FAVORITE TRACKS</a>
+<a href="/users/{{user._id}}/albums/new" class="btn btn-primary">ADD ALBUM</a>
+<button type='submit'>DELTE THIS USER</button>
+</form>
