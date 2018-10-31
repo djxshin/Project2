@@ -33,12 +33,13 @@ router.delete('/users/:usersId', usersController.delete)
 router.get('/users/:usersId/albums', albumsController.index)
 // NEW
 router.get('/users/:usersId/albums/new', albumsController.new)
+// EDIT
+router.get('/users/:usersId/albums/edit', albumsController.edit)
 // SHOW
 router.get('/users/:usersId/albums/:albumsId', albumsController.show)
 // CREATE
 router.post('/users/:usersId/albums', albumsController.create)
-// EDIT
-router.get('/users/:usersId/albums/edit', albumsController.edit)
+
 // UPDATE
 router.put('/users/:usersId/albums/:albumsId', albumsController.update)
 // DELETE
