@@ -22,9 +22,9 @@ https://www.figma.com/file/Ggom9xTwY4owMX8gR4qMzePH/Project-2-Music-Lovers?node-
 
 We live in a soceity where social media such as Facebook, Twitter, Instagram, and ect. is a huge part of our world. We connect with other people based on our hobbies and interests in our everyday life.
 
-Music Lover is a playform where users can share their soundcloud or apple music information in their user profile, and share their favorite albums from music artists.
+Music Lover is a platform where users can share their soundcloud or apple music information in their user profile, and share their favorite albums from the music artists.
 
-Music moves very fast in the current soceity and we want to re-live the moments where people used to antiipate album releases and the glory days of records, cassette tapes, and CDs by sharing their information of their old or current favorite albums.
+Music moves very fast in the current soceity and we want to re-live the moments where people used to anticipate album releases and the glory days of records, cassette tapes, and CDs by sharing their information of their old or current favorite albums.
 
 This is a full stack application that will allows the user to monitor their profile, and allow them to Add their favorite music albums & the tracks from those perspective albums.
 
