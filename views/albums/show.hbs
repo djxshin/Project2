@@ -1,0 +1,52 @@
+<main>
+
+    <h2>Viewing Album Title:
+
+
+        {{albums.Album_Title}}
+
+    </h2>
+
+
+    <br>
+    <div class="container-show">
+
+
+        <h3>Soundcloud:</h3>
+        <p>
+
+            {{user.soundcloud}}
+        </p>
+        <br>
+
+        <h3>Apple_music:</h3>
+        <p>
+
+            {{user.apple_music}} </p>
+        <br>
+
+        <h3>Favorite_genre:</h3>
+        <p>
+
+            {{user.favorite_genre}} </p>
+        <br>
+
+        <h3>Location:</h3>
+        <p>
+
+            {{user.location}} </p>
+        <br>
+
+
+
+
+    </div>
+
+    <a href="/users/{{user._id}}/edit" class="btn btn-primary" type='submit'>Edit</a>
+    <a href="/users/{{user._id}}/albums" class="btn btn-primary">FAVORITE ALBUMS</a>
+
+</main>
+    <a  href="/users/{{user._id}}/albums/new" class="btn btn-primary">ADD ALBUM</a>
+    <form action="/users/{{user._id}}?_method=DELETE" class="btn btn-primary" method="POST" type='submit'>
+    DELETE
+    </form>
